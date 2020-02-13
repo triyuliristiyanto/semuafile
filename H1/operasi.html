@@ -1,0 +1,30 @@
+<script>
+    alert('Selamat Datang')
+
+    let angka1 = prompt('Masukan Angka Ke 1')
+    let angka2 = prompt('Masukan Angka Ke 2')
+    let hasil = prompt('1. + \n 2. - \n 3. *\n 4. : \n 5. mod \n')
+    let total;
+
+    if (hasil == '1' || hasil == '+' ) {
+        total = Number(angka1) + Number(angka2)
+        alert('Hasil = ' + total)
+    }
+    else if (hasil == '2' || hasil == '-') {
+        total = Number(angka1) - Number(angka2)
+        alert('Hasil = ' + total)
+    }
+    else if (hasil == '3' || hasil == '*') {
+        total = Number(angka1) * Number(angka2)
+        alert('Hasil = ' + total)
+    }
+    else if (hasil == '4' || hasil == '/') {
+        total = Number(angka1) / Number(angka2)
+        alert('Hasil = ' + total)
+    }
+    else if (hasil == '5' || hasil == 'mod') {
+        total = Number(angka1) % Number(angka2)
+        alert('Hasil = ' + total)
+    }
+
+</script>
