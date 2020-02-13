@@ -1,0 +1,149 @@
+SENJATA DARI :
+
+
+typeOf() <= untuk mengetahui tipe data yang dimaksud strig,int,boolean
+
+
+STRING : 
+
+.includes <= untuk cek di dalam string ada yang dimaksud atau nga.
+const isEmail = (str="") => {
+    var hasil = true
+    for (i=0 ; i < str.length ; i++){
+      str.includes("@")  && str.includes(".") ? hasil : hasil=false
+    }
+    console.log(hasil) 
+}
+isEmail('me@fikri.tech')
+
+
+mobil.Length => untuk menghitung jumlah emelen dalam string
+ex ('ayla','avanza','xenia') jadi kalo di string hitung tiap dalam kutipnya ayla =4, avanza = 6 dan xebia = 5 
+
+mobil.split => untuk memisahkan string ayla menjadai 'a','y','l','a'
+ex : var str =['ayla']
+     let hasil = str.split('')
+     console.log (hasil)
+
+.charAt
+var nama = 'tri'
+console.log(nama.charAt(1)) ==> 'r' (karakter index ke 1 dari strig tri )
+
+
+
+var x = 'Halo Dunia';  
+
+console.log(x.length); ==> jumlah sting nya 10
+
+console.log(x.indexOf('Dunia')); ==> jumlah huruf dari dunia adalah 5
+
+console.log(x.substr(5, 3)); ==> diambil dari awalnya index berapa 5 dapat D sebanyak berapa diambilnya 3 dpt DUN
+
+console.log(x.slice(5, 8)); ==> diambil dari awalnya index5 dapat D sampai berapa sampai duni tapi yang ke 8 nya ga di ikutin jd hanya dun
+
+console.log(x.split(' ')); ==> dipisahkan berdasarkan spasi MERUBAH STRING jadi array['Halo', 'Dunia']
+
+
+var x = 'halo';
+var y = 'DUNIA';
+var z = 12345;
+
+console.log(x.toUpperCase()); <== dirubah menjadi huruf besar jadi 'HALO'
+
+console.log(y.toLowerCase()); <== dirubah menjadi huruf kecil 'dunia'
+
+console.log(x.replace('ha', 'mi')) <== diganti awal 'ha' menjadi 'mi' asalnya 'halo' menjadi 'milo'
+console.log(x.replace(/ha/g, 'mi')) <== diganti awal /ha/g menjadi 'mi' asalnya 'halo' menjadi 'milo'
+
+console.log(z.toString())  <== asalnya angka dirubah menjadi string 
+console.log(typeof(z.toString())) <== tipe datanya asalnya Number berubah jadi string
+
+
+MERUBAH STRING MENJADI NUMBER
+
+let a = parseInt('123');  <== merubah string menjadi number '123' menjadi 123
+let b = parseFloat('123'); <== merubah string menjadi number '123' menjadi 123
+let c = parseInt('1234.5678'); <== merubah string menjadi number 1234.5678 menjadi 1234 titik belakang koma di abaikan
+let d = parseFloat('1234.5678'); <== merubah string menjadi number 1234.5678 menjadi 1234.5678 titik belakang koma di munculkan
+let e = parseInt('Halo Dunia'); <== hasilnya NaN tidak bisa karna fungsi ini merubah string menjadi number
+let f = parseFloat('Halo Dunia'); <== hasilnya NaN tidak bisa karna fungsi ini merubah string menjadi number
+
+
+angka ga bisa dipangil satusatu 39
+
+// FUNGSI ARITMATIKA
+
+console.log(Math.PI); //<= RUMUS LINGKARAN Math.PI : Berisi nilai dari pi (π) dengan nilai 3.141592653589793
+console.log(Math.abs(-4.7)); //<= ABSOLUTE ATAU MERUBAH MIN MENJADI PLUS
+console.log(Math.pow(6, 2)); //<= DIPANGKATKAN JUMLAHNYA ATAU 6 ^2 = 36 berfungsi untuk untuk mencari hasil pemangkatan. Fungsi ini membutuhkan 2 buah argumen. Argumen pertama adalah angka asal, dan argumen kedua adalah nilai pangkat
+console.log(Math.sqrt(64)); //<= AKAR DARI ANGKA 64 ADALAH 8 (digunakan untuk mencari hasil dari akar kuadrat sebuah angka. Fungsi ini membutuhkan 1 argumen, yaitu angka yang akan dihitung.
+console.log(Math.cbrt(8)); // HASILNYA 2
+console.log(Math.round(4.7)); //<=HASILNYA 5 (berfungsi untuk membulatkan nilai angka ke bilangan terdekat. Jika nilai desimal dibawah 0.5 maka akan dibulatkan ke bawah, namun jika nilai desimal bernilai 0.5 atau lebih, akan dibulatkan keatas. Fungsi ini membutuhkan 1 argumen, yaitu angka yang akan dibulatkan
+console.log(Math.round(4.4)); //<= HASILNYA 4 berfungsi untuk membulatkan nilai angka ke bilangan terdekat. Jika nilai desimal dibawah 0.5 maka akan dibulatkan ke bawah, namun jika nilai desimal bernilai 0.5 atau lebih, akan dibulatkan keatas. Fungsi ini membutuhkan 1 argumen, yaitu angka yang akan dibulatkan
+console.log(Math.floor(4.7));  //<= HASILNYA 4 (berfungsi untuk pembulatan kebawah dari sebuah nilai desimal. Fungsi ini membutuhkan 1 argumen, yaitu angka yang akan dibulatkan.
+console.log(Math.ceil(4.4)); //<=  HASILNYA 5 (berfungsi untuk pembulatan keatas dari sebuah nilai desimal. Fungsi ini membutuhkan 1 argumen, yaitu angka yang akan dibulatkan. 
+console.log(Math.random()); // berfungsi untuk menghasilkan angka acak dalam setiap pemanggilan. Fungsi ini tidak membutuhkan argumen apapun. Nilai akhir berada dalam rentang 0 dan 1. Untuk hasil angka acak 1-100, kita tinggal mengalikan hasil fungsi ini dengan 100
+console.log(Math.max(1,3,5)); //<= HASILNYA 5 (berfungsi untuk mencari angka paling besar diantara argumen yang diberikan. Fungsi ini membutuhkan 1 atau lebih argumen.    
+console.log(Math.min(1,3,5)); //<= HASILNYA 1(berfungsi untuk mencari angka paling kecil diantara argumen yang diberikan. Fungsi ini membutuhkan 1 atau lebih argumen.   
+
+
+
+ARRAY : 
+
+
+let mobil = ['Alya','Xenia','Avanza'];
+
+.length => untuk menghitung jumlah emelen dalam array
+ex mobil.length; = ['alya','avanza','xenia'] ini ada 3 element didalam array
+
+.toString() => untuk merubah array jadi string
+ex mobil.tpString() =['alya','avanza','xenia'] menjadi keadaan string alya,xenia,avanza
+
+.join('') => untuk mengabungkan semua elemnt array menjadi string yang diinginkan 
+ex mobil.join('*') = contohnya digabungkan dgn bintang alya * xenia * avanza
+
+.sort() => mensort dari yang terkecil ke yang terbesar dari sebuah array
+ex mobil.sort() menjadi ['alya','avanza','xenia']
+
+.reverse() => membalikan element keluaran dari sebuah array/yang asalanya awal jadi akhir
+ex mobil.reverse() menjadi ['xenia','avanza','alya']
+
+.pop() => menghapus elemnt paling akhir
+ex mobil.pop() menjadi['alya','xenia'] elemnt avanza sudah di hapus
+
+.push() => menambah ement didalam arrray paling akhir
+ex mobil.push('Timor') menjadi ['alya'.'xenia','timor'] 
+
+.shift() => menghapus elemet di array paling awal
+ex mobil.shift() menjadi ['xenia','timor']
+
+.unshift() => menambahkan ement didalam array paling awal
+ex mobil.unshift('fortuner') menjadi ['fortuner'.'xenia','timor']
+
+.splice() =>memotong kemudian bisa menghapus atau menambahkan
+ex mobil.splice (1,0, 'corola') menjadi ['fortuner','xenia','corola','timor'] menambahkan setelah index ke 1
+ex mobil.splice (0,1) menjadi ['xenia','corola','timor'] <= dihapus index 1 sebanyak 1
+
+.delete mobil[0] = menghapus index ke
+ex [ <1 empty item>,'corola','timor'] dihapus index ke 0 nya
+
+.slice() => memotong array dari awal ke akhir
+ex : 
+let buah = ['Banana', 'Orange','Lemon', 'Apple', 'Mango'];
+
+.split('.') <= akan memisahkan menjadi 2 array by titik(.) merubah aray menjadi perkata atau perhuruf
+var angka = 22114.51 <== asalnya angka 
+angka = String(angka) <== dirubah menjadi string dari string dirubah menjadi 2 array  berisi string
+var batas = angka.split('.') // split ubah string ke array
+
+console.log(batas)
+
+
+.re
+
+
+let buah2 = buah.slice(1);
+console.log(buah2) menghasilkan =>  [ 'Orange', 'Lemon', 'Apple', 'Mango' ] yang dislice ['Banana']
+ 
+let buah4 = buah.slice(1,4);
+console.log(buah4) menghasilkan => [ 'Orange', 'Lemon', 'Apple' ] karna yng di pangil index ke 1 sampei 3  ['Banana'] ada di index ke 0 dan ['Mango'] di index ke 4 ga di pangul
