@@ -1,0 +1,53 @@
+//SOAL NO.1
+
+const filterData = (arr= [],str = '') => {
+    
+    var hasil = []
+
+    for (var i = 0; i < arr.length ;i++){  // untuk meng
+        for (var j = 0 ; j < arr[i].length; j++){
+            if (arr[i][j] == str){
+                hasil.push(arr[i])
+            }
+        }
+    }
+    console.log (hasil)
+}
+
+filterData(['fikri','fendi','budi','andi'] , 'f')
+filterData(['fikri','fendi','budi','andi'] , 'i')
+
+
+//SOAL NO.3
+
+const numify = (angka = []) =>{
+
+    var hasilGenap = []
+    var hasilGanjil = []
+
+    for (var i = 0 ; i < angka.length ; i++){
+        if (angka[i] % 2 == 0){
+            hasilGenap.push(angka[i])
+        }else {
+            hasilGanjil.push(angka[i])
+        }
+    }  
+    console.log ('Angka Genap = ' + hasilGenap) +'\n'
+    console.log ('Angka ganjil = ' + hasilGanjil) 
+
+    var angkaGenapMax = Math.max(...hasilGenap) // 4
+    var angkaGanjilMax = Math.max(...hasilGanjil) //1
+
+    console.log('max angka genap = ' + angkaGenapMax ) 
+    console.log('max angka ganjil = ' + angkaGanjilMax )
+
+    var avg = hasilGenap.reduce(function (a,b){return a+b})/hasilGenap.length 
+    var totalGanjil = hasilGanjil.reduce(function(a,b){return a+b})
+    
+    console.log ('avg. angka genap = ' + avg )
+    console.log ('sum angka ganjil = '+ totalGanjil )
+
+}
+
+
+numify([2,3,1,2,3,4,5,4])

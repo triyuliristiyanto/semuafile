@@ -1,0 +1,27 @@
+<script>
+
+    alert ('Halo selamat datang')
+    
+    let a = new Date()
+    let tanggal = a.getDate()
+    let plat_nomor = prompt(' Silahkan Masukan Plat Nomer kamu?')
+    plat_nomor = plat_nomor.slice(5,6)
+
+    if (tanggal % 2 == 0){
+        tanggal = 'genap'
+    }else{
+        tanggal = 'ganjil'
+    }
+
+    if(plat_nomor % 2 == 0){
+        plat_nomor = 'genap'
+    }else{
+        plat_nomor = 'ganjil'
+    }    
+
+    if(plat_nomor == tanggal){
+         alert( 'Boleh lewat')
+    }else{
+         alert ( 'Gak Boleh Lewat')
+     }
+</script>

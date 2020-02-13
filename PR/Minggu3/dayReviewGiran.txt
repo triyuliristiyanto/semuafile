@@ -1,0 +1,92 @@
+// SOAL DAY REVIEW
+// GIRAN
+
+// NO.1
+findOpposite = (number=0) => {
+    
+    if(number<0){
+        hasil = Math.abs(number);
+    }else if(number>0){
+        hasil = -Math.abs(number);
+    }else {
+        hasil = 'Angka yg di input 0'
+    }
+    
+    console.log(hasil)
+    
+
+}
+// findOpposite(-4)
+// findOpposite(54)
+// findOpposite(0)
+
+// NO.2
+isEmail = (str='') => {
+    let hasil = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,4})+$/.test(str)
+    console.log(hasil)
+
+
+}
+// isEmail('me@fikri.tec')
+// isEmail('me')
+// isEmail('fikri@google')
+// isEmail('giran@gmail.com')
+// isEmail('saitama@gmail')
+
+// NO.3
+makeSquare = (num1=0,num2=0) => {
+    
+    let hasil='';
+    
+    var angka = 1
+    for (let i=0; i<num2; i++){
+        for (let j=0; j<num1 ;j++){
+                hasil += angka
+                angka++ 
+            }
+            hasil += '\n'
+        }
+        
+    console.log(hasil)
+
+}
+// makeSquare(2,3)
+// makeSquare(3,3)
+
+// NO.4
+
+passwordStrength = (str='') => {
+
+    var huruf = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
+    var angka = '1234567890'
+    var hasil = ''
+
+    var termasukHuruf = false
+    for (let i = 0; i < str.length; i++) {
+        if (huruf.includes(str[i])) {
+            termasukHuruf = true            
+        }
+        
+    }
+
+    var termasukAngka = false
+    for (let j = 0; j < str.length; j++) {
+        if (angka.includes(str[j])) {
+            termasukAngka = true            
+        }
+        
+    }
+
+    if (termasukHuruf && termasukAngka) {
+        hasil = 'password strong'   
+    }else {
+        hasil = 'password weak'
+    }
+
+    console.log(hasil)
+
+}
+
+passwordStrength('fikrii')
+passwordStrength('fikriF12')
+passwordStrength('saitamaA123')

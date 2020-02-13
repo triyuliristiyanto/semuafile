@@ -1,0 +1,31 @@
+
+const sumTwosmallest =(angka = []) =>{
+    
+    let penjumlahan = []
+
+    angka.sort(function (a,b) {return a - b})
+    // console.log (angka)
+    penjumlahan = angka[0] + angka[1]
+    console.log (penjumlahan)
+
+}
+
+sumTwosmallest ([3,4,2,4,2,4,2,3,4])
+sumTwosmallest ([3,2,1])
+
+// TUGAS NOMER 2
+
+const removeDuplicates = (arr='') => {
+    
+    let new_arr = arr.split(' ') 
+    // console.log (new_arr)
+
+    let sortir = [...new Set(new_arr)];
+    console.log (sortir);
+
+}
+
+removeDuplicates('alpha beta gamma gamma')
+removeDuplicates('mari mari kesini')
+removeDuplicates('kamu kamu aku')
+removeDuplicates('kamu kamu aku aku sayang')

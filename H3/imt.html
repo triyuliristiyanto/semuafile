@@ -1,0 +1,50 @@
+<script>
+    alert ('Selamat Datang')
+
+    let berat, tinggi
+    let imt
+
+    berat = prompt ('Masukan Berat Badan Anda (KG)?' )    
+    //console.log (berat)                        
+    tinggi = prompt ('Masukan Tinggi badan Anda (CM)?' )
+    //console.log (tinggi)
+
+    tinggi = tinggi / 100
+
+    imt =  berat / (tinggi * tinggi)  
+    //console.log (imt)
+
+    if (imt < 18.5){
+        alert (`Hasil anda adalah ${berat}
+                tinggi badan anda adalah ${tinggi}
+                hasil IMT anda adalah ${imt}
+                berat badan anda kurang`
+                )
+    }else if ((imt >= 18.5) && (imt <= 24.9 )){
+        alert (`Hasil anda adalah ${berat}
+                tinggi badan anda adalah ${tinggi}
+                hasil IMT anda adalah ${imt}
+                berat badan anda ideal`
+                )
+    }else if ((imt >= 25.0 ) && (imt <= 29.9)){
+        alert (`Hasil anda adalah ${berat}
+                tinggi badan anda adalah ${tinggi}
+                hasil IMT anda adalah ${imt}
+                berat badan anda berlebih`
+                )
+    }else if ((imt >=30 ) && (imt <= 39.9)){
+        alert (`Hasil anda adalah ${berat}
+                tinggi badan anda adalah ${tinggi}
+                hasil IMT anda adalah ${imt}
+                berat badan anda sangat berlebih`
+                )
+    }else if (imt > 40){
+        alert (`Hasil anda adalah ${berat}
+                tinggi badan anda adalah ${tinggi}
+                hasil IMT anda adalah ${imt}
+                berat badan anda obesitas`
+                )
+
+    }
+
+</script>

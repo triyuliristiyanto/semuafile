@@ -1,0 +1,124 @@
+<script>
+var apel,anggur,jeruk
+
+var hargaApel = 10000
+var hargaAnggur = 15000
+var hargaJeruk = 20000
+
+var stokApel = 5
+var stokAnggur = 7
+var stokJeruk = 8
+
+var stokAkhirApel
+var stokAkhirAnggur
+var stokAkhirJeruk
+
+var jumbelAppel
+var jumbelAnggur
+var jumbelJeruk
+
+var total_jumlah
+var lanjut_bayar = true
+
+// PEMILIHAN 
+
+do {
+
+    do{ 
+    jumbelAppel = prompt('Silahkan masukan jumlah beli apel?')
+    
+    if (jumbelAppel > 0)
+    {
+        if (jumbelAppel > stokApel){
+        alert ("stok tidak mencukupi silahkan cek kembali")
+        lanjut_bayar = false
+    }
+    }else {
+        alert ('inputan anda bukan angka !!')
+    }
+    }while (jumbelAppel > stokApel   ||  !(jumbelAppel > 0))
+
+   lanjut_bayar = true 
+
+        do{
+        jumbelAnggur = prompt('Silahkan masukan jumlah beli anggur?')
+
+        if (jumbelAnggur > 0)
+        {
+            if (jumbelAnggur > stokAnggur){
+            alert ("stok tidak mencukupi silahkan cek kembali")
+            lanjut_bayar = false
+        }
+        }else {
+            alert ('inputan anda bukan angka !!')
+        }    
+        }while (jumbelAnggur > stokAnggur || !(jumbelAnggur > 0))
+        
+        lanjut_bayar = true 
+        
+                do {
+                jumbelJeruk = prompt('Silahkan masukan jumlah beli Jeruk?')
+
+                if (jumbelJeruk > 0)
+                {
+                    if (jumbelJeruk > stokJeruk){
+                    alert ("stok tidak mencukupi silahkan cek kembali")
+                    lanjut_bayar = false
+                }
+                }else {
+                    alert ('inputan anda bukan angka !!')
+                }
+                
+                }while (jumbelJeruk > stokJeruk || !(jumbelJeruk > 0 ))
+
+
+    Apel = Number(jumbelAppel) * hargaApel
+    Anggur = Number(jumbelAnggur) * hargaAnggur
+    Jeruk = Number(jumbelJeruk) * hargaJeruk 
+
+    stokAkhirApel = stokApel - jumbelAppel
+    stokAkhirAnggur = stokAnggur - jumbelAnggur
+    stokAkhirJeruk = stokJeruk - jumbelJeruk
+
+total_jumlah = Apel+Anggur+Jeruk
+
+// if(lanjut_bayar==true){
+    alert(
+        'Detail Belanja \n\n' +
+            'apel : ' + hargaApel + ' x ' + jumbelAppel + ' = ' + hargaApel*jumbelAppel + '\n' +
+            'Anggur : ' + hargaAnggur + ' x ' + jumbelAnggur + ' = ' + hargaAnggur*jumbelAnggur + '\n' +
+            'Jeruk : ' + hargaJeruk + ' x ' + jumbelJeruk + ' = ' + hargaJeruk*jumbelJeruk + '\n\n'+
+            'Total : ' + total_jumlah )
+            alert (
+                'Detail stok akhir \n\n' +
+            'apel : ' + stokAkhirApel + '\n' +
+            'anggur : ' + stokAkhirAnggur + '\n' +
+            'Jeruk : ' + stokAkhirJeruk
+             )
+            
+
+    do { 
+
+    var kembalian;
+
+    bayar = prompt ("silahkan masukan jumlah bayar") 
+     if (bayar > 0){
+        kembalian = bayar - total_jumlah
+   
+            if (kembalian >= 0){
+            alert (" jumlah pembayaran anda berhasil kembalian anda " + '\n' + kembalian)
+            }else if (kembalian < 0){
+            alert(" jumlah pembayaran anda kurang" + '\n' + kembalian)
+            }     
+
+     } else alert ('data yang anda bukan angka !!')
+   
+    } while ( bayar < total_jumlah || !(bayar > 0)) 
+    
+    var pengulangan  = prompt ('pengulangan (y/n)')
+}while (pengulangan == 'y')
+
+
+ 
+
+</script>

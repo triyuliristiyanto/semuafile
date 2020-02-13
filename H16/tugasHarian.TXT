@@ -1,0 +1,81 @@
+// NO 1
+
+const Find_short = (str ='') =>{
+    var newStr = str.split(' ') 
+    //console.log(newStr)
+    var newJumlah = []
+    
+
+    for(var i = 0 ; i < newStr.length ; i++){
+        newJumlah.push(newStr[i].length)
+        //console.log(newJumlah)
+    }
+
+    var newSort = newJumlah.sort(function(a,b){return a - b})
+
+    console.log(newSort[0])
+
+
+}
+
+Find_short("Many people get up early in the morning");// would return 2
+Find_short("Every office would getting newest monitor");// would return 5
+Find_short("Create new file after this morning");// would return 3
+
+
+
+//SOAL no.2
+
+
+
+
+
+//SOAL no.3
+const Multiplication_table = (angka,baris) =>{
+    //var Newangka = 1
+    var hasil = ''
+
+    for(var i = 1; i < angka+1 ; i++){
+        for (var j = 1; j < baris+1; j++){
+            hasil += ( j * i ) + ' ';    
+            // Newangka += 1
+            // console.log (i)
+            // console.log (j)
+        }
+        hasil += '\n'
+    }
+    console.log(hasil)
+}
+
+// Multiplication_table(3,3)
+// Multiplication_table(5,3)
+// Multiplication_table(3,5)
+
+// SOAL No.4
+const Alphabet_position = (str = '') =>{
+
+    var newStr = str.split('')
+    //console.log (newStr)
+    var cekAlpa = ' abcdefghijklmnopqrstuvwxyz'
+    //console.log(cekAlpa)
+    var hasil = ''
+    var newHasil = []
+
+    for(var i = 0 ; i < newStr.length ; i++){
+        
+        if(!(newStr[i] >= 0)){
+            // bilang kalo misalnya bukan huruf yang di inputkan
+            hasil = cekAlpa.indexOf(newStr[i].toLowerCase()) // <== cek string yang dicari ada di index keberapa dari cekalpha kemudian setelah cek di database alfa hasilnya masukan variabel hasil berbentuk angka indek ke berapa.
+            if(hasil !== -1){
+                newHasil.push(hasil)
+            }
+        }
+    
+    }
+  console.log(newHasil)  
+}
+
+Alphabet_position("thE")
+Alphabet_position("The sunset sets at twelve o' clock.");
+Alphabet_position("it’s never too late to try");
+Alphabet_position("Have you done your homework?")

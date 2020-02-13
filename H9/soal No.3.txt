@@ -1,0 +1,20 @@
+    var pilihan
+    var textIde1 = ['bad','bad','bad','bad']
+    var textIde2 = ['bad','good','bad','bad']
+    var textIde3 = ['bad','good','good','bad']
+    var textIde4 = ['bad','good','bad','good','good']
+
+function PilihIde(pilihan){
+
+    if (pilihan == textIde1){
+        console.log ('fail')
+    }else if (pilihan == textIde2){
+        console.log ('publish')
+    }else if (pilihan == textIde3){
+        console.log ('publish')
+    }else if(pilihan == textIde4){        
+        console.log ('i smell a series')
+    }
+    
+}
+console.log(PilihIde(['bad','bad','bad','bad']))

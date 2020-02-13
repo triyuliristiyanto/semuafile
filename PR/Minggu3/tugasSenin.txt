@@ -1,0 +1,39 @@
+function findOposite(angka){
+    
+    
+    if (angka < 0){
+        return(-angka)
+    }
+    if (angka > 0){
+        return(-angka)
+    }
+    // console.log(angka) 
+}
+console.log(findOposite(-4))
+console.log(findOposite(54))
+
+
+function isEmail(str=''){
+    // var Newstr= str[8]
+    // console.log(Newstr)
+
+    if (str[2] == '@' && str[8] == '.'){
+        return 'true'
+    }else{
+        return 'false'
+    }
+
+}
+console.log(isEmail('me@fikri.tech'))
+console.log(isEmail('me'))
+console.log(isEmail('fikri@google'))
+
+function makeSquare(angka1,angka2){
+    hasil = angka1 * angka2
+//     var hasil = Math.sqrt(3)
+    console.log(hasil)
+}
+
+makeSquare(2,3)
+makeSquare(3,3)
+

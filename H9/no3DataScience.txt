@@ -1,0 +1,12 @@
+function given(angka){
+    
+    var hasil = []
+    for ( i = 0 ; i < angka.length ; i++ ){
+        hasil.push(angka[i])
+        hasil.sort((a,b) => a - b)
+    }return hasil
+    
+}
+
+console.log (given([6,3,2,1,5]))
+console.log (given([3,2,3,4],[2,9,8,7,4]))

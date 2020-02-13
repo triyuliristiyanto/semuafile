@@ -1,0 +1,14 @@
+ function HitungVocal(kata){
+    var hasil = 0;
+
+    var new_kata = kata.toString();
+
+    for(var i = 0 ; i < kata.length; i++){
+        if(kata[i].toLowerCase() == 'a' || kata[i].toLowerCase() == 'i' || kata[i].toLowerCase() == 'u' || kata[i].toLowerCase() == 'e' || kata[i].toLowerCase() == 'o'){
+          hasil += 1;
+        }
+         }
+    return hasil
+}
+
+console.log(HitungVocal('sapi ku ada berapa'))

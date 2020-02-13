@@ -1,0 +1,52 @@
+// var angka = [71, 70, 73, 70, 70, 69, 70, 72, 71, 300, 71, 69]
+
+// console.log ('Ini Adalah data Asli' + " " +angka)
+
+// angka_sort = angka.sort(function (a,b) {return a - b})
+// var tghAngkaAwal = angka.slice(0,5)
+// var tghAngkaAkhir = angka.slice(6,12)
+// var Q1 = (tghAngkaAwal[3] + tghAngkaAwal[4]) / 2
+// var Q2 = (tghAngkaAkhir[8] + tghAngkaAkhir[9]) / 2
+
+
+// console.log ('Ini Adalah Angka Yang sudah di Sort'  + " " + angka_sort )
+// console.log ('Ini Adalah setengah angka Awal' + " " + tghAngkaAwal)
+// console.log ('Ini Adalah Setengah Angka Akhir' + " " +tghAngkaAkhir)
+// console.log ('Ini Adalah Q1' + " " +Q1)
+// console.log ('Ini Adalah Q2' + " " +Q2)
+
+
+
+// // 
+
+
+
+function IQR (num){
+    
+    var angkaSort = num
+    for(var i = 0 ; i < num.length ; i++) {
+        i =+ angkaSort.sort(function(a,b) {return a - b})
+    }
+
+    return angkaSort
+}
+
+function SpliceAwal(angkaSort){
+  
+    ganjilGenap = angkaSort.length % 2;
+    if (ganjilGenap == 0){
+        q1 = angkaSort.slice(0,angkaSort.length/2)
+        console.log('Setengeh Data Pertama Adalah ' + q1)
+        q3 = angkaSort.slice(angkaSort.length/2,angkaSort.length)
+        console.log('Setengah Data Terakhir Adalah ' + q3)
+    }else{
+        q1 = angkaSort.slice(0,angkaSort.length/2)
+        console.log('Q1 Ganjil ' + q1)
+        q3 = angkaSort.slice(angkaSort.length/2+1,angkaSort.length)
+        console.log('Q3 Ganjil ' + q3)
+    } 
+}
+
+console.log (IQR([71, 70, 73, 70, 70, 69, 70, 72, 71, 300, 71, 69]))
+console.log (SpliceAwal([69,69,70,70,70,70,71,71,71,72,73,300]))
+console.log (SpliceAwal([69,69,70,70,70,40,71,71,71,72,73]))

@@ -1,0 +1,48 @@
+ const findOpposite = (_num) => {
+    var num = _num.toString()
+    var print = ''
+     num.includes("-") ? print = num.slice(1,num.length) : print = "-" + num
+        console.log(Number(print)) 
+}
+findOpposite(54)
+findOpposite(-4)
+
+const isEmail = (str="") => {
+    var hasil = true
+    for (i=0 ; i < str.length ; i++){
+      str.includes("@")  && str.includes(".") ? hasil : hasil=false
+    }
+    console.log(hasil) 
+}
+isEmail('me@fikri.tech')
+isEmail('me')
+isEmail('fikri@google')
+
+const passwordStrength = (str='') => {
+    var numeric= '1234567890'
+    for (i=0 ; i < str.length ; i++){
+     str[i] == str[i].toUpperCase() && str.includes(numeric.charAt())? text = 'Strong Password' : text = 'too weak'
+    }
+    console.log(text) 
+}
+
+passwordStrength('fikrii')
+passwordStrength('fikriF12')
+
+const makeSquare = (column,row) => {
+  var length = column * row
+  var print = ''
+ for(j=0 ; j < row ; j++){
+ for(i =0 ; i < column ; i++){
+   print += 1 +(j*column )+ i + ' '
+ }
+ print+= '\n'
+ }
+
+console.log(print)
+}
+
+makeSquare(2,3)
+
+
+

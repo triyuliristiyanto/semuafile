@@ -1,0 +1,21 @@
+function TambahNilaiSampaiAkhir(num){
+    
+    var hasil = 0;
+    for (var i = 1 ; i <= num ; i++){
+    hasil += i
+    }return hasil   
+}
+
+console.log (TambahNilaiSampaiAkhir(4))
+console.log (TambahNilaiSampaiAkhir(5))
+
+
+function MenyatukanAngkaNomer(angka,huruf){
+    
+    var hasil = []
+    for (var i = 0 ; i < angka.length ; i++ ){
+    hasil.push(angka[i],huruf[i])
+    } 
+    return hasil
+}
+console.log (MenyatukanAngkaNomer([1,2,3,4,5],['a','b','c','d','e']))

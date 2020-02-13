@@ -1,0 +1,2 @@
+html adalah tampilan saja
+java script adalah otaknya atau yang mebuat fungsi di html itu berkerja

@@ -1,0 +1,44 @@
+<script>
+    alert ('Selamat Datang')
+    
+    // DECLARASI
+
+    let player1,player2
+
+    // INPUTAN USER
+     player1 = prompt ('masukan pilihan player 1 \n'+
+                                '1. gunting \n '+
+                                '2. kertas \n '+
+                                '3. batu' )
+                                
+     player2 = prompt ('masukan pilihan player 2 \n' +
+                                '1. gunting \n '+
+                                '2. kertas \n '+
+                                '3. batu' )
+    // PENGERJAAN
+
+    if (player1 === 'gunting' && player2 === 'gunting' ) {
+        alert('Hasil  nya adalah seri')
+        }
+    else if (player1 === 'gunting' && player2 === 'kertas') {
+         alert('pemenangnya adalah player 1 ')
+    }else if (player1 === 'gunting' && player2 === 'batu') {
+         alert('pemenangnya adalah player 2')
+    }
+    if (player1 === 'kertas' && player2 === 'kertas' ) {
+        alert('Hasil  nya adalah seri')
+    }else if (player1 === 'kertas' && player2 === 'batu') {
+         alert('pemenangnya adalah player 1')
+    }else if (player1 === 'kertas' && player2 === 'gunting') {
+         alert('pemenangnya adalah player 2')
+    }
+    if (player1 === 'batu' && player2 === 'batu' ) {
+        alert('Hasil  nya adalah seri')
+    }else if (player1 === 'batu' && player2 === 'gunting') {
+         alert('pemenangnya adalah player 1')
+    }else if (player1 === 'batu' && player2 === 'gunting') {
+         alert('pemenangnya adalah player 2')
+    }else alert (" Inputan anda salah")
+
+
+</script>

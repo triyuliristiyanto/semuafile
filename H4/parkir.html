@@ -1,0 +1,133 @@
+<script>
+    
+    // var  jamMasuk,jamKeluar,selisihJam,kelebihanJam,biyayaParkir
+    // var  jamPertama = 4000 ,JamKedua = 1000
+    // var cekJam = true
+  
+
+    // do {
+
+    //     do {
+    //         jamMasuk = Number (prompt('Silahkan masukan jam masuk anda?'))
+    //         console.log(jamMasuk)
+            
+    //         if (jamMasuk <= 0 || jamMasuk > 24 || isNaN (jamMasuk) ){
+
+    //             alert ('anda salah memasukan jam masuk')
+    //         } else           
+    //         {
+    //             cekJam = false
+    //         }
+
+    //     }
+    //     while (cekJam)
+
+    //     cekJam = true
+         
+    //     do {
+    //         jamKeluar = Number (prompt('Silahkan masukan jam keluar anda?'))
+    //         if (jamKeluar < 0 || jamKeluar > 24 || isNaN(jamKeluar)){
+
+    //             alert ('anda salah memasukan jam Keluar')
+                
+    //         } else
+    //         {
+    //             cekJam = false
+    //         }
+    //     }
+    //     while (cekJam)    
+
+    //     selisihJam = jamKeluar - jamMasuk // 5 jam // 14k
+    //     alert ('Anda Parkir selama ' + selisihJam + 'Jam'  )
+    //     // console.log (selisihJam)
+        
+    //     if (selisihJam < 4 ){
+    //         biyayaParkir = selisihJam * jamPertama  
+    //         alert (biyayaParkir) 
+
+    //     }else { // 5
+    //         biyayaParkir = (3*4000) + ((selisihJam-3) * 1000) 
+    //         alert(biyayaParkir)
+    //     }
+
+    
+
+    // var pengulangan = prompt ('Apakah akan melanjutkan transaksi (y/n)?')
+    // } while ( pengulangan == "y")
+
+    
+
+
+//DARI DOSEN
+
+// <!-- 
+//     Parkir App
+//     Masuk Jam Berapa ? (0 - 24)
+//     Keluar Jam Berapa ? (0 - 24)
+//     Biaya 
+//     3 jam pertama 4000/jam
+//     selanjutnya 1000/jam
+//     Segitiga Sama Kaki
+// -->
+
+
+
+
+
+    let jam_masuk, jam_keluar, total_jam_parkir;
+
+    do{
+        do{
+            jam_masuk = prompt('Jam Berapa Masuk? (0 - 24)') //7
+
+            if(!(jam_masuk >=0 && jam_masuk <=24) || jam_masuk == ''){
+                alert('Inputan Anda Salah , Hanya Boleh Input (0-24)')
+            }
+
+        }while(!(jam_masuk >=0 && jam_masuk <=24) || jam_masuk == '')
+
+
+
+        do{
+            jam_keluar = prompt("Jam Berapa Keluar ? (0 - 24)") //6
+            jam_keluar = Number(jam_keluar)
+            console.log(jam_keluar)
+
+            if(jam_keluar < 0 || jam_keluar > 24 || isNaN(jam_keluar)){
+                alert('Inputan Anda Salah , Hanya Boleh Input (0-24)')
+            }
+
+        }while(jam_keluar < 0 || jam_keluar > 24 || isNaN(jam_keluar))
+
+        //        7           6
+        if(jam_masuk >= jam_keluar){
+            total_jam_parkir = (jam_keluar - jam_masuk) + 24
+        }else{
+            total_jam_parkir = jam_keluar - jam_masuk
+        }
+
+        var total_biaya; 
+        var tarif_tiga_jam_pertama = 3000
+        var tarif_selanjutnya = 1000
+        // 12 jam
+        if(total_jam_parkir > 3){
+            total_biaya = (3 * tarif_tiga_jam_pertama) + ((total_jam_parkir - 3) * tarif_selanjutnya)
+        }else{
+            total_biaya = 3000 * tarif_tiga_jam_pertama 
+        }
+
+        alert(
+            `Anda Parkir Selama ${total_jam_parkir} jam
+            Biaya Parkir Anda Adalah Rp . ${total_biaya}`
+        )
+        var lanjut = prompt("Mau Pakai lagi ? (y/n)")
+    }while(lanjut == 'y')
+
+
+
+
+    
+
+    
+    
+</script>

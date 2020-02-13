@@ -1,0 +1,52 @@
+<!-- 
+    VARIABEL , TYPE DATA , COMMENTS, PENGKONDISIAN
+ -->
+
+<!-- 
+ -->
+ <script>
+
+    var x = 'Halo Dunia';
+    console.log(x.length); // 10
+    console.log(x.indexOf('ia')); // 5
+    console.log(x.substr(5, 5)); // Dunia
+    console.log(x.slice(5,11)); // Nia
+    console.log(x.split(' ')); // konvert string to array
+    
+    var y = 78623
+    
+
+   var str = '123123.123'
+
+    // allow commas
+    str = parseFloat(str)
+
+    // not allow
+     str = parseInt(str)
+
+    console.log(typeof(str))
+    console.log(str)
+
+    var b = 'halo dunia'
+    b = parseInt(b)
+    console.log(b)
+
+    var harga = 5000
+    var produk = 'Apel'
+
+    var text = produk + ' Rp. ' + harga
+    console.log(typeof(text))
+
+    var angka = 10
+    // angka --
+    angka = angka + 1
+    angka = angka -1 
+    console.log(angka)
+
+    var alamat = 'Jl Turnojoyo no 11'
+    var nama_jalan = alamat.slice(3 , 12)
+    var nama_jalan_2 = alamat.substr( 3 ,9 )
+    console.log(nama_jalan)
+    console.log(nama_jalan_2)
+
+ </script>
